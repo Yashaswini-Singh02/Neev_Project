@@ -19,8 +19,7 @@ export const FlowMap: React.FC = () => {
     if (isPlaying) {
       const timer = setTimeout(() => {
         setShowLastArrow(true);
-      }, 4000); // Adjust timing to match the total duration of animations
-
+      }, 4000);
       return () => clearTimeout(timer);
     }
   }, [isPlaying]);
@@ -29,7 +28,6 @@ export const FlowMap: React.FC = () => {
     <section className="py-10 px-32 w-full h-screen">
       <h1 className="text-3xl font-bold mb-8">Flow Map</h1>
 
-      {/* Breadcrumb Structure */}
       <div className="text-xl font-medium flex items-center justify-center gap-4 mb-8">
         <p className="border px-6 py-2 rounded-lg shadow-lg">Record Yourself</p>
         <ChevronRight size={24} className="text-gray-400" />
@@ -46,12 +44,10 @@ export const FlowMap: React.FC = () => {
         </p>
       </div>
 
-      {/* Line Suggesting the Play Button */}
       <p className="text-lg text-center font-semibold text-gray-600 mb-8">
         Visualize the flow by clicking the play button below:
       </p>
 
-      {/* Play/Pause Button */}
       <div className="flex items-center justify-center gap-x-6 relative">
         <p className="text-lg font-medium border w-max px-10 rounded-lg py-2 flex items-center justify-center gap-x-2 shadow-lg">
           Start Consultation
